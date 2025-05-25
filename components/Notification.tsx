@@ -31,7 +31,6 @@ export default function Notification({ notification }: any) {
         </Link>
 
         <View style={styles.notificationInfo}>
-          {/* todo: fix later */}
           <Link href={`/user/${notification.sender._id}`} asChild>
             <TouchableOpacity>
               <Text style={styles.username}>{notification.sender.username}</Text>
@@ -42,8 +41,8 @@ export default function Notification({ notification }: any) {
             {notification.type === "follow"
               ? "started following you"
               : notification.type === "like"
-                ? "liked your post"
-                : `commented: "${notification.comment}"`}
+              ? "liked your post"
+              : `commented: "${notification.comment}"`}
           </Text>
           <Text style={styles.timeAgo}>
             {formatDistanceToNow(notification._creationTime, { addSuffix: true })}
