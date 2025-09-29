@@ -18,7 +18,7 @@ import {
 import { Image } from "expo-image";
 
 import * as ImagePicker from "expo-image-picker";
-import * as FileSystem from "expo-file-system";
+import * as FileSystem from "expo-file-system/legacy";
 
 import { useMutation } from "convex/react";
 import { api } from "@/convex/_generated/api";
